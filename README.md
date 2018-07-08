@@ -15,14 +15,15 @@ et_xmlfile is a low memory library for creating large XML files.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/et_xmlfile-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/et_xmlfile-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/et_xmlfile-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/et_xmlfile-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/et_xmlfile-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/et-xmlfile-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/et_xmlfile-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/et_xmlfile-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/et_xmlfile/badges/version.svg)](https://anaconda.org/conda-forge/et_xmlfile)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/et_xmlfile/badges/downloads.svg)](https://anaconda.org/conda-forge/et_xmlfile)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-et_xmlfile-green.svg)](https://anaconda.org/conda-forge/et_xmlfile) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/et_xmlfile.svg)](https://anaconda.org/conda-forge/et_xmlfile) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/et_xmlfile.svg)](https://anaconda.org/conda-forge/et_xmlfile) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/et_xmlfile.svg)](https://anaconda.org/conda-forge/et_xmlfile) |
 
 Installing et_xmlfile
 =====================
@@ -67,6 +68,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
