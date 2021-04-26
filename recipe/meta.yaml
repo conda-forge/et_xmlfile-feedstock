@@ -1,6 +1,6 @@
 {% set name = "et_xmlfile" %}
-{% set version = "1.0.1" %}
-{% set sha256 = "614d9722d572f6246302c4491846d2c393c199cfa4edc9af593437691683335b" %}
+{% set version = "1.1.0" %}
+{% set sha256 = "8eb9e2bc2f8c97e37a2dc85a09ecdcdec9d8a396530a6d5a33b30b9a92da0c5c" %}
 
 package:
   name: {{ name|lower }}
@@ -13,11 +13,11 @@ source:
 
 build:
   noarch: python
-  number: 1001
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
-  build:
+  host:
     - python
     - setuptools
   run:
@@ -31,8 +31,8 @@ about:
   home: https://bitbucket.org/openpyxl/et_xmlfile
   license: MIT
   license_family: MIT
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENCE.rst'
-  summary: 'An implementation of lxml.xmlfile for the standard library'
+  license_file: {{ environ["RECIPE_DIR"] }}/LICENCE.rst
+  summary: An implementation of lxml.xmlfile for the standard library
 
   description: |
     et_xmlfile is a low memory library for creating large XML files.
