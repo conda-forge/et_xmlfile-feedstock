@@ -1,13 +1,17 @@
 About et_xmlfile
 ================
 
-Home: https://bitbucket.org/openpyxl/et_xmlfile
+Home: https://foss.heptapod.net/openpyxl/et_xmlfile
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/et_xmlfile-feedstock/blob/master/LICENSE.txt)
 
 Summary: An implementation of lxml.xmlfile for the standard library
+
+Development: https://foss.heptapod.net/openpyxl/et_xmlfile
+
+Documentation: https://et-xmlfile.readthedocs.io
 
 et_xmlfile is a low memory library for creating large XML files.
 
@@ -39,25 +43,52 @@ Installing `et_xmlfile` from the `conda-forge` channel can be achieved by adding
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `et_xmlfile` can be installed with:
+Once the `conda-forge` channel has been enabled, `et_xmlfile` can be installed with `conda`:
 
 ```
 conda install et_xmlfile
 ```
 
-It is possible to list all of the versions of `et_xmlfile` available on your platform with:
+or with `mamba`:
+
+```
+mamba install et_xmlfile
+```
+
+It is possible to list all of the versions of `et_xmlfile` available on your platform with `conda`:
 
 ```
 conda search et_xmlfile --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search et_xmlfile --channel conda-forge
+```
+
+Alternatively, `mamba repoquery` may provide more information:
+
+```
+# Search all versions available on your platform:
+mamba repoquery search et_xmlfile --channel conda-forge
+
+# List packages depending on `et_xmlfile`:
+mamba repoquery whoneeds et_xmlfile --channel conda-forge
+
+# List dependencies of `et_xmlfile`:
+mamba repoquery depends et_xmlfile --channel conda-forge
 ```
 
 
 About conda-forge
 =================
 
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+[![Powered by
+NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
@@ -67,10 +98,12 @@ for each of the installable packages. Such a repository is known as a *feedstock
 A feedstock is made up of a conda recipe (the instructions on what and how to build
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
-[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/)
-and [TravisCI](https://travis-ci.org/) it is possible to build and upload installable
-packages to the [conda-forge](https://anaconda.org/conda-forge)
-[Anaconda-Cloud](https://anaconda.org/) channel for Linux, Windows and OSX respectively.
+[Azure](https://azure.microsoft.com/en-us/services/devops/), [GitHub](https://github.com/),
+[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
+[Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
+it is possible to build and upload installable packages to the
+[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
@@ -109,13 +142,14 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers
 =====================
 
 * [@curtisalexander](https://github.com/curtisalexander/)
+* [@synapticarbors](https://github.com/synapticarbors/)
 
