@@ -14,21 +14,26 @@ source:
 build:
   noarch: python
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: {{ PYTHON }} -m pip install . -vv
+
 
 requirements:
   host:
-    - python
-    - setuptools
+    - python >=3.6
+    - pip
   run:
-    - python
+    - python >=3.6
 
 test:
   imports:
     - et_xmlfile
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
-  home: https://bitbucket.org/openpyxl/et_xmlfile
+  home: https://foss.heptapod.net/openpyxl/et_xmlfile
   license: MIT
   license_family: MIT
   license_file: {{ environ["RECIPE_DIR"] }}/LICENCE.rst
@@ -37,8 +42,10 @@ about:
   description: |
     et_xmlfile is a low memory library for creating large XML files.
   doc_url: https://et-xmlfile.readthedocs.io
-  dev_url: https://bitbucket.org/openpyxl/et_xmlfile
+  dev_url: https://foss.heptapod.net/openpyxl/et_xmlfile
+
 
 extra:
   recipe-maintainers:
     - curtisalexander
+    - synapticarbors
